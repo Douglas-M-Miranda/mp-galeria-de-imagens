@@ -1,0 +1,234 @@
+/* configuração padrão */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.959);  
+}
+
+/* Estilizar menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 14%;
+    height: 100vh;
+
+    background-color: black;
+
+    position: fixed;
+}
+
+/* estilizar titulo menu */
+
+.menuTitulo {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 0.8;
+
+    padding-left: 14px;
+}
+
+/* estilizar itens de navegação */
+
+.menuItens a {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 36px;
+
+    padding-left: 14px;
+    border-radius: 10px;
+
+    display: block;
+
+    color: #ffffff;
+
+    transition: background-color 0.19s;
+}
+
+.menuItens a:hover {
+    background-color: #8686869c
+}
+
+.menuItens a:active {
+    background-color: #868686d8;
+}
+
+.destaque {
+    font-weight: bold;
+}
+
+/* estilizar footer/redes sociais */
+.redeSociais {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* estilizar conteudo principal */
+.home {
+    margin: 4px;
+    height: 99vh;
+
+    flex-grow: 1;
+
+    background-image: url('assets/Tela de fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center
+}
+
+.home > h2  {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+
+    margin-left: 14%;
+}
+
+.home a {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.home a:active {
+    color: rgba(0, 0, 0, 0.452)
+}
+
+.home h1  {
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-left: 14%;
+}
+
+/* configuração especifica pagina contato */
+
+.texto {
+    text-align: center;
+}
+
+/* configuração especifica para pagina bio */
+
+.home > p {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    word-wrap: break-word;
+
+    width: 50%;
+    margin-left: 14%;
+    
+    text-align: center;
+}
+
+/* configuração especifica para pagina foto */
+
+.galeriaFotos {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  
+  grid-template-columns: repeat(2, minmax(393px, 500px));
+  grid-auto-columns: minmax(393px, 500px);
+  grid-template-rows: 296px 296px;
+  grid-auto-rows: 296px;
+
+  margin-left: 14%;
+  padding-top: 20px;
+}
+
+.galeriaFotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.galeriaFotos img:hover {
+  transform: scale(1.1); 
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0 0 14%;
+}
+
+button {
+    font-family: "Sansation", sans-serif;
+    font-size: 20px;
+    
+    background-color: rgba(0, 0, 0, 0.959);
+    border: none;
+    color: #ffffff;
+}
+
+button:active {
+    color: #979797;
+}
+
+/* Responsividade */
+
+@media (max-width: 1390px) {
+    .redeSociais{
+        gap: 5px;
+    }
+}
+
+@media (max-width: 1192px) {
+    .menuTitulo{
+        font-size: 2rem;
+    }
+    
+    .redeSociais{
+        gap: 0px;
+    }
+}
+
+@media (max-width: 846px) {
+    .menu {
+        display: none;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .home > h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .home > h2 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .home > p {
+        margin: 0;
+        
+    }
+}
